@@ -1,0 +1,27 @@
+---
+title: "Stanley Xiao"
+format: html
+editor: visual
+---
+
+## About Me
+
+I am a Master of Statistics student at North Carolina State University with interests in biostatistics, statistical programming, and data analysis.
+
+## Skills
+
+R, SAS, Python, SQL, Tableau, and Excel
+
+## Education
+
+**North Carolina State University** Master of Statistics
+
+**University of California, San Diego** B.A. Economics, Minor in Cognitive Science
+
+## Projects
+
+#### Housing Costs and Commuting Patterns Across the United States
+
+An analysis of U.S. Census PUMS data from 2021-2024 using R. This project includes reusable functions for accessing Census API data, weighted statistical summaries, and graphical analysis.
+
+[View Project](https://stanleyxiao01.github.io/ST558_Project_1/ST%20558%20Project%201.html)

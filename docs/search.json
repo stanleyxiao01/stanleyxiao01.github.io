@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Stanley Xiao",
+    "section": "",
+    "text": "I am a Master of Statistics student at North Carolina State University with interests in biostatistics, statistical programming, and data analysis."
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Stanley Xiao",
+    "section": "",
+    "text": "I am a Master of Statistics student at North Carolina State University with interests in biostatistics, statistical programming, and data analysis."
+  },
+  {
+    "objectID": "index.html#skills",
+    "href": "index.html#skills",
+    "title": "Stanley Xiao",
+    "section": "Skills",
+    "text": "Skills\nR, SAS, Python, SQL, Tableau, and Excel"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Stanley Xiao",
+    "section": "Education",
+    "text": "Education\nNorth Carolina State University Master of Statistics\nUniversity of California, San Diego B.A. Economics, Minor in Cognitive Science"
+  },
+  {
+    "objectID": "index.html#projects",
+    "href": "index.html#projects",
+    "title": "Stanley Xiao",
+    "section": "Projects",
+    "text": "Projects\n\nHousing Costs and Commuting Patterns Across the United States\nAn analysis of U.S. Census PUMS data from 2021-2024 using R. This project includes reusable functions for accessing Census API data, weighted statistical summaries, and graphical analysis.\nView Project"
+  }
+]
