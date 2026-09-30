@@ -29,7 +29,7 @@ An analysis of U.S. Census PUMS data from 2021-2024 using R. This project includ
 ## Coursework
 
 - [ST 558 HW1](ST%20558%20HW%20Files/Data%20Science%20Short%20Essay.html)
-- [ST 558 HW2](ST%20558%20HW%20Files/Xiao_HW2_Individual.html) 
-- [ST 558 HW3](ST%20558%20HW%20Files/Xiao_HW3.html) 
-- [ST 558 HW4](ST%20558%20HW%20Files/Xiao_HW4.html) 
+- [ST 558 HW2](ST%20558%20HW%20Files/Xiao_HW2_Individual.html)
+- [ST 558 HW3](ST%20558%20HW%20Files/Xiao_HW3.html)
+- [ST 558 HW4](ST%20558%20HW%20Files/Xiao_HW4.html)
 - [ST 558 HW5](ST%20558%20HW%20Files/Xiao_HW5.html)
