@@ -1,0 +1,162 @@
+---
+title: "HW3_Xiao_Individual"
+format: html
+editor: visual
+---
+
+```{r}
+#install.packages("tidyverse")
+library(tidyverse)
+```
+
+## Task 1: Conceptual Questions
+
+1.  In order to access the previous folder in the working directory, the relative path you would specify to get the file would be "../myData.csv". The notation ".." tells R to move up one folder or directory from "homework" into "myfolder".
+2.  A major benefit of using R projects is that it is well suited to work with Git/Github. Another major benefit of using R is that all files associated with the project in one location.
+3.  Git is a version-control system that tracks changes made to files and allows us to view those very changes. It also manages branching and merging too. Github is the online platform that hosts Git repos and makes it easy to store, share, and even collaborate with others on projects.
+4.  Tibbles prints a finite amount of rows and columns such that it fits the size of the screen whereas a data.frame would display the whole dataset. Tibbles also have more strict notations that doesn't allow partial column name matching.
+
+## Task 2: Reading Delimited Data
+
+#### 1. Importing Glass Data
+
+```{r}
+# Defining columns for Glass Data
+glass_col <- c("Id", "RI", "Na", "Mg", "Al", "Si", "K", "Ca", "Ba", "Fe", "Glass_Type")
+
+# Reading CSV file into R and assigning column names
+glass_data <- read_csv(file="https://www4.stat.ncsu.edu/~online/datasets/glass.data", col_names = glass_col)
+
+glass_data
+```
+
+#### 2. Importing Yeast Data
+
+```{r}
+# Defining columns for Yeast Data
+yeast_cols <- c("seq_name", "mcg", "gvh", "alm", "mit", "erl", "pox", "vac", "nuc", "class")
+
+#Creating Yeast data.frame including above column names
+yeast_data <- read_table(
+  file = "https://www4.stat.ncsu.edu/~online/datasets/yeast.data", col_names = yeast_cols
+)
+yeast_data
+
+```
+
+## Task 3: Combining Excel and Delimited Data
+
+#### 3. Importing White Wine Data
+
+```{r}
+#install.packages("readxl")
+library(readxl)
+
+white_wine_url <- "https://www4.stat.ncsu.edu/~online/datasets/white-wine.xlsx"
+download.file(white_wine_url, destfile = "white-wine.xlsx", mode = "wb")
+
+white_wine <- read_excel("white-wine.xlsx", sheet = 1)
+white_wine
+```
+
+#### 4. Overwriting Column Names (Sheet 2 Names Replaces Sheet 1's)
+
+```{r}
+white_wine_names <- read_excel("white-wine.xlsx", sheet=2)
+
+colnames(white_wine) <- white_wine_names[[1]]
+```
+
+#### 5. Adding Wine Type Column
+
+```{r}
+white_wine <- white_wine %>%
+  mutate(type = "white")
+```
+
+#### 6. Reading and Cleaning Red Wine Data
+
+```{r}
+red_wine <- read_delim(file = "https://www4.stat.ncsu.edu/~online/datasets/red-wine.csv", delim = ";")
+
+colnames(red_wine) <- white_wine_names[[1]]
+
+red_wine <- red_wine %>%
+    mutate(type = "red")
+
+red_wine
+```
+
+#### 7. Combining Both Datasets
+
+```{r}
+wine_data <- bind_rows(white_wine, red_wine)
+
+wine_data
+```
+
+#### 8. Defining getIQR()
+
+```{r}
+getIQR <- function(x, ...) {
+  quants <- quantile(x, probs = c(0.25, 0.75), ...)
+  unname(quants[2]-quants[1])
+}
+```
+
+#### 9. Applying getIQR() to Wine Columns
+
+```{r}
+getIQR(wine_data$fixed_acidity)
+getIQR(wine_data$citric_acid)
+```
+
+#### 10. Defining getCoefVar()
+
+```{r}
+getCoefVar <- function(x, ...) {
+  sd(x, ...) / abs(mean(x, ...))
+}
+```
+
+#### 11. Applying getCoefVar() to Wine Columns
+
+```{r}
+getCoefVar(wine_data$fixed_acidity)
+getCoefVar(wine_data$citric_acid)
+```
+
+#### 12. Defining getSummaries()
+
+```{r}
+getSummaries <- function(x, ...) {
+  c(IQR = getIQR(x, ...),
+    CoefVar = getCoefVar(x, ...)
+    )
+}
+```
+
+#### 13. Applying getSummaries() to Wine Columns
+
+```{r}
+getSummaries(wine_data$fixed_acidity)
+getSummaries(wine_data$citric_acid)
+```
+
+#### 14. Defining Custom Infix Function for Column Binding
+
+```{r}
+'%cbind%' <- function(x, y) {
+  cbind(x, y)
+}
+
+df1 <- data.frame(unif = runif(10), norm = rnorm(10))
+df2 <- data.frame(gamma = rgamma(10, shape=1), beta = rbeta(10, shape1 = 5, shape2 = 1))
+vec1 <- rnorm(10, mean = 10)
+
+df_combined_2 <- df1 %cbind% df2
+print(head(df_combined_2))
+
+df_combined_3 <- df1 %cbind% df2 %cbind% vec1
+print(head(df_combined_3))
+```

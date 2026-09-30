@@ -1,0 +1,156 @@
+---
+title: "sxiao3_HW2_Individual"
+format: html
+editor: visual
+---
+
+## Task 1: Basic Vector Practice
+
+1.  Assigning names for pre-treatment BP values, post-treatment BP values
+
+```{r}
+#Pre-Treatment BP values
+pre_bp <- c(130, 128, 116, 124, 133, 134, 118, 126, 114, 127, 141, 138, 128, 140, 137, 131, 120, 128, 139, 135)
+
+#Post-Treatment BP values
+post_bp <- c(114, 98, 113, 99, 107, 116, 113, 111, 119, 117, 101, 119, 130, 122, 106, 106, 124, 102, 117, 113)
+```
+
+2.  Assigning Subject Names for each Pre/Post-treatment BP values
+
+```{r}
+names(pre_bp) <- paste("Subject", 1:20, sep="_")
+names(post_bp) <- paste("Subject", 1:20, sep="_")
+```
+
+3.  Change in BP for each Patient
+
+```{r}
+diff_bp <- pre_bp - post_bp
+```
+
+4.  Average Decrease in BP Across All Patients
+
+```{r}
+avg_change <- mean(diff_bp)
+```
+
+5.  Which Patients Experienced Decrease in BP After Treatment (Positive Change)
+
+```{r}
+lower_bp <- which(diff_bp > 0)
+```
+
+6.  Subset Vector in \[HW2 1.5\] to Only Return Positive Change
+
+```{r}
+only_lower <- diff_bp[lower_bp]
+```
+
+7.  Average Decrease in BP for Positive Change (BP Decrease)
+
+```{r}
+avg_lower <- mean(only_lower)
+```
+
+## Task 2: Basic Data Frame Practice
+
+1.  Create a data frame object with four columns corresponding to your data above: patient, pre_bp, post_bp, and diff_bp
+
+```{r}
+bp <- data.frame(patient = names(pre_bp), pre_bp, post_bp, diff_bp, row.names=NULL)
+
+bp
+```
+
+2.  Return only rows where the diff_bp column is negative. (Use \[ or learn about the subset() function if you’d like. If you use \[, don’t reference the original vector from the first part, access the column of the data frame when looking at making a comparison.
+
+```{r}
+subset(bp, diff_bp < 0)
+```
+
+3.  Add a new column to the data frame corresponding to TRUE if the post_bp is less than 120. Recall you can use \$ to reference a column. If you reference a column that doesn’t exist, and save a vector (of appropriate length in it), that vector becomes a column of your data frame! Similar to the previous question, don’t reference the original vector from the first part, access the column of the data frame when looking at making a comparison.
+
+```{r}
+bp$bp_post_lt_120 <- bp$post_bp < 120
+```
+
+4.  Finally, print the data frame out nicely in your final document by modifying the code below appropriately.
+
+```{r}
+knitr::kable(bp)
+```
+
+## Task 3: List Practice
+
+1.  Create a new data frame with this data in it that is similar to the data frame from task 2 (including the new column).
+
+```{r}
+#Now we're adding in another experiment where the 'treatment' was actually a placebo.
+placebo_bp_pre <- c(138, 135, 147, 117, 152, 134, 114, 121, 131, 130)
+
+placebo_bp_post <- c(105, 136, 123, 130, 134, 143, 135, 139, 120, 124)
+
+placebo <- data.frame(patient=paste('Subject', 1:10, sep="_"), pre_bp = placebo_bp_pre, post_bp = placebo_bp_post, diff_bp = placebo_bp_pre - placebo_bp_post, bp_post_lt_120 = placebo_bp_post < 120)
+```
+
+2.  Now create and store a list with two elements: • 1st element named treatment and contains the first data frame you created. • 2nd element named placebo and contains the second data frame you created.
+
+```{r}
+bp_list <- list(treatment = bp, placebo = placebo)
+```
+
+3.  Access the first list element using three different types of syntax.
+
+```{r}
+# Method 1
+bp_list$treatment
+# Method 2
+bp_list[["treatment"]]
+# Method 3
+bp_list[[1]]
+```
+
+4.  In one line, access the placebo data frame, pre_bp column.
+
+```{r}
+bp_list$placebo$pre_bp
+```
+
+## Task 4: Control Flow Practice
+
+1.  Suppose we want to characterize the post-treatment (or placebo) blood pressure measurement as optimal (≤ 120), borderline (120 \< bp ≤ 130), and high (\> 130). First, create a new column in each data frame from above called status. You can do this via
+    1.  your_df\$status \<- character(20) #or 10 depending on number of observations
+
+```{r}
+bp_list$treatment$status <- character(20)
+bp_list$placebo$status <- character(10)
+```
+
+2.  For the non-placebo data frame (within the list), create a for loop and use if/then/else logic to create the status column’s values.
+
+```{r}
+for (i in 1:nrow(bp_list$treatment)) {
+  if (bp_list$treatment$bp_post[i] <= 120) {
+    bp_list$treatment$status[i] <- "Optimal"
+  } else if (bp_list$treatment$bp_post[i] <= 130) {
+    bp_list$treatment$status[i] <- "Borderline"
+  } else {
+    bp_list$treatment$status[i] <- "High"
+  }
+}
+```
+
+3.  Repeat for the placebo data frame (within the list).
+
+```{r}
+for (i in 1:nrow(bp_list$placebo)) {
+  if (bp_list$placebo$bp_post[i] <=  120) {
+    bp_list$placebo$status[i] <- "Optimal"
+  } else if (bp_list$placebo$bp_post[i] <= 130) {
+    bp_list$placebo$status[i] <- "Borderline"
+  } else {
+    bp_list$placebo$status[i] <- "High"
+  }
+}
+```

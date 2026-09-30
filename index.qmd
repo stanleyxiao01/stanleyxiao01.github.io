@@ -25,3 +25,11 @@ R, SAS, Python, SQL, Tableau, and Excel
 An analysis of U.S. Census PUMS data from 2021-2024 using R. This project includes reusable functions for accessing Census API data, weighted statistical summaries, and graphical analysis.
 
 [View Project](https://stanleyxiao01.github.io/ST558_Project_1/ST%20558%20Project%201.html)
+
+## Coursework
+
+- [ST 558 HW1](ST%20558%20HW%20Files/Data%20Science%20Short%20Essay.html)
+- [ST 558 HW2](ST%20558%20HW%20Files/Xiao_HW2_Individual.html) 
+- [ST 558 HW3](ST%20558%20HW%20Files/Xiao_HW3.html) 
+- [ST 558 HW4](ST%20558%20HW%20Files/Xiao_HW4.html) 
+- [ST 558 HW5](ST%20558%20HW%20Files/Xiao_HW5.html)
