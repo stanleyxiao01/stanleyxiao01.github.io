@@ -117,5 +117,40 @@
     "title": "Stanley Xiao",
     "section": "Coursework",
     "text": "Coursework\n\nST 558 HW1\nST 558 HW2\nST 558 HW3\nST 558 HW4\nST 558 HW5"
+  },
+  {
+    "objectID": "ST 558 HW Files/Data Science Short Essay.html",
+    "href": "ST 558 HW Files/Data Science Short Essay.html",
+    "title": "Data Science Short Essay",
+    "section": "",
+    "text": "∗ What do you think being a data scientist is about? ∗ What differences/similarities do you see between data scientists and statisticians? ∗ How do you view yourself in relation to these two areas?\nA data scientist solves real-world problems centered around data. They answer questions that usually support business decisions. They typically require domain knowledge in that field as well as some level of statistical understanding; without a proper statistical background they tend to interpret their computational work incorrectly. Statisticians tend to focus more on theoretical math or mathematical foundations, uncertainty, and formal modeling. I view myself as someone who’s learning how to balance the best of both worlds."
+  },
+  {
+    "objectID": "ST 558 HW Files/Data Science Short Essay.html#data-science-reflection",
+    "href": "ST 558 HW Files/Data Science Short Essay.html#data-science-reflection",
+    "title": "Data Science Short Essay",
+    "section": "",
+    "text": "∗ What do you think being a data scientist is about? ∗ What differences/similarities do you see between data scientists and statisticians? ∗ How do you view yourself in relation to these two areas?\nA data scientist solves real-world problems centered around data. They answer questions that usually support business decisions. They typically require domain knowledge in that field as well as some level of statistical understanding; without a proper statistical background they tend to interpret their computational work incorrectly. Statisticians tend to focus more on theoretical math or mathematical foundations, uncertainty, and formal modeling. I view myself as someone who’s learning how to balance the best of both worlds."
+  },
+  {
+    "objectID": "ST 558 HW Files/Data Science Short Essay.html#quarto",
+    "href": "ST 558 HW Files/Data Science Short Essay.html#quarto",
+    "title": "Data Science Short Essay",
+    "section": "Quarto",
+    "text": "Quarto\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "ST 558 HW Files/Data Science Short Essay.html#running-code",
+    "href": "ST 558 HW Files/Data Science Short Essay.html#running-code",
+    "title": "Data Science Short Essay",
+    "section": "Running Code",
+    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n# Kernel Density Estimate\ny &lt;- density(iris$Petal.Width)\n\n# Determine the class, type, and structure of y\nclass(y)\n\n[1] \"density\"\n\ntypeof(y)\n\n[1] \"list\"\n\nstr(y)\n\nList of 8\n $ x         : num [1:512] -0.656 -0.648 -0.64 -0.633 -0.625 ...\n $ y         : num [1:512] 0.00161 0.00178 0.00197 0.00217 0.00239 ...\n $ bw        : num 0.252\n $ n         : int 150\n $ old.coords: logi FALSE\n $ call      : language density.default(x = iris$Petal.Width)\n $ data.name : chr \"iris$Petal.Width\"\n $ has.na    : logi FALSE\n - attr(*, \"class\")= chr \"density\""
+  },
+  {
+    "objectID": "ST 558 HW Files/Data Science Short Essay.html#visualization-of-object-y",
+    "href": "ST 558 HW Files/Data Science Short Essay.html#visualization-of-object-y",
+    "title": "Data Science Short Essay",
+    "section": "Visualization of Object ‘y’",
+    "text": "Visualization of Object ‘y’\n\n\n\n\n\n\n\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
   }
 ]

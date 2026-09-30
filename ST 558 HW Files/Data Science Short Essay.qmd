@@ -1,0 +1,39 @@
+---
+title: "Data Science Short Essay"
+format: html
+editor: visual
+---
+
+## Data Science Reflection
+
+∗ **What do you think being a data scientist is about?** ∗ **What differences/similarities do you see between data scientists and statisticians?** ∗ **How do you view yourself in relation to these two areas?**
+
+A data scientist solves real-world problems centered around data. They answer questions that usually support business decisions. They typically require domain knowledge in that field as well as some level of statistical understanding; without a proper statistical background they tend to interpret their computational work incorrectly. Statisticians tend to focus more on theoretical math or mathematical foundations, uncertainty, and formal modeling. I view myself as someone who's learning how to balance the best of both worlds.
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+# Kernel Density Estimate
+y <- density(iris$Petal.Width)
+
+# Determine the class, type, and structure of y
+class(y)
+typeof(y)
+str(y)
+```
+
+## Visualization of Object 'y'
+
+```{r}
+#| echo: false
+# Plot Function on Y
+plot(y, main="Density Estimate of Iris Petal Width", xlab = "Petal Width")
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
