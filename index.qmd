@@ -8,13 +8,16 @@ editor: visual
 
 I am a Master of Statistics student at North Carolina State University with interests in biostatistics, statistical programming, and data analysis.
 
+[Resume](Stanley%20Xiao%20Resume.pdf)
+| [LinkedIn](https://www.linkedin.com/in/stanleyxiao00/)
+
 ## Skills
 
 R, SAS, Python, SQL, Tableau, and Excel
 
 ## Education
 
-**North Carolina State University** Master of Statistics
+**North Carolina State University** Master of Statistics, Expected 2027
 
 **University of California, San Diego** B.A. Economics, Minor in Cognitive Science
 

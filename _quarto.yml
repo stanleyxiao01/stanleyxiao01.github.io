@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - "Stanley Xiao Resume.pdf"
 
 website:
   title: "Stanley Xiao"
