@@ -32,7 +32,7 @@
     "href": "index.html#projects",
     "title": "Stanley Xiao",
     "section": "Projects",
-    "text": "Projects\n\nHousing Costs and Commuting Patterns Across the United States\nAn analysis of U.S. Census PUMS data from 2021-2024 using R. This project includes reusable functions for accessing Census API data, weighted statistical summaries, and graphical analysis.\nView Project"
+    "text": "Projects\n\nHousing Costs and Commuting Patterns Across the United States\nAn analysis of U.S. Census PUMS data from 2021-2024 using R. This project includes reusable functions for accessing Census API data, weighted statistical summaries, and graphical analysis."
   },
   {
     "objectID": "ST 558 HW Files/Xiao_HW5.html",
@@ -152,5 +152,12 @@
     "title": "Data Science Short Essay",
     "section": "Visualization of Object ‘y’",
     "text": "Visualization of Object ‘y’\n\n\n\n\n\n\n\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+  },
+  {
+    "objectID": "index.html#certification",
+    "href": "index.html#certification",
+    "title": "Stanley Xiao",
+    "section": "Certification",
+    "text": "Certification\nSAS Certified Specialist: Base Programming Using SAS 9.4"
   }
 ]

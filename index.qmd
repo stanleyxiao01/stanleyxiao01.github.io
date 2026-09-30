@@ -8,12 +8,14 @@ editor: visual
 
 I am a Master of Statistics student at North Carolina State University with interests in biostatistics, statistical programming, and data analysis.
 
-[Resume](Stanley%20Xiao%20Resume.pdf)
-| [LinkedIn](https://www.linkedin.com/in/stanleyxiao00/)
+[Resume](Stanley%20Xiao%20Resume.pdf) | [LinkedIn](https://www.linkedin.com/in/stanleyxiao00/)
 
 ## Skills
 
 R, SAS, Python, SQL, Tableau, and Excel
+
+## Certification
+**SAS Certified Specialist: Base Programming Using SAS 9.4**
 
 ## Education
 
@@ -23,11 +25,9 @@ R, SAS, Python, SQL, Tableau, and Excel
 
 ## Projects
 
-#### Housing Costs and Commuting Patterns Across the United States
+#### [Housing Costs and Commuting Patterns Across the United States](https://stanleyxiao01.github.io/ST558_Project_1/ST%20558%20Project%201.html)
 
 An analysis of U.S. Census PUMS data from 2021-2024 using R. This project includes reusable functions for accessing Census API data, weighted statistical summaries, and graphical analysis.
-
-[View Project](https://stanleyxiao01.github.io/ST558_Project_1/ST%20558%20Project%201.html)
 
 ## Coursework
 
